@@ -21,8 +21,8 @@ body{
     flex-direction: column;
     /*Generic Body Styles*/
     color: #365563;
-    background-color: #faf0dc;
     font-family: 'Montsettat', sans-serif;
+    margin: 0;
 }
 
 h1, h2, h3{
@@ -30,4 +30,41 @@ h1, h2, h3{
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: #253f4b;
+}
+
+/*Header*/
+header{
+    background-color: #f1e9d2;
+    padding: 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 1.5px 1.5px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    padding-left: 25px;
+}
+
+nav{
+    display: block;
+    position: relative;
+    align-items: center;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1.5rem;
+}
+
+#menu-list{
+    font-size: 105%;
+    letter-spacing: 2px;
+    list-style-type: none;
+}
+
+#menu-list > li{
+    display: inline-block;
+    padding-right: 25px;
 }
