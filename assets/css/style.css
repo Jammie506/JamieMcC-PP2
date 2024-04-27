@@ -68,3 +68,22 @@ nav{
     display: inline-block;
     padding-right: 25px;
 }
+
+/* Main Body */
+
+main{
+    margin-top: 108px;
+}
+
+#hero{
+    
+}
+
+#cover-text{
+    font-size: 130%;
+    bottom: 50px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 10px;
+    padding-left: 25px;
+}
