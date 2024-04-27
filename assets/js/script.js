@@ -1,7 +1,7 @@
 //Global Variables
 
 //For examTimer & endAlert()
-let secondsBetweenActions = 5;
+let secondsBetweenActions = 1200;
 let secondsRemaining = secondsBetweenActions;
 let examInterval;
 
@@ -22,6 +22,8 @@ let exam = document.getElementById("exam-content");
 let intro = document.getElementById("exam-intro");
 // Get Submission Page
 let submitted = document.getElementById("exam-submitted");
+// Getting On Screen Timer
+let timer = document.getElementById("timer");
 
 function examStart() {
     //Establishing Timer
@@ -44,6 +46,19 @@ function examStart() {
   function myTimer(){
     secondsRemaining --;
     console.log(secondsRemaining);
+    let timeRemaining;
+
+    // Converting Seconds into Minutes and Seconds for User Timer
+    let min = Math.floor (secondsRemaining / 60);
+    let sec = secondsRemaining % 60;
+
+    // Force Min & Seconds to be Double Digits
+    let minFull = String(min.toString()).padStart(2, '0');
+    let secFull = String(sec.toString()).padStart(2, '0');
+
+    timeRemaining = minFull + ":" +secFull;
+
+    timer.innerHTML = timeRemaining;
     if(secondsRemaining == 0){
         endAlert();
     }
