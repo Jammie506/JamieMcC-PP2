@@ -32,8 +32,10 @@ function examStart() {
     // Hide Exam Content Until Exam Starts
     if (checkBox.checked == true){
         //Hide Exam Intro and Show Exam
+        //TODO Set up Question Randomization 
         exam.style.display = "block";
         intro.style.display = "none"
+
         //Start Timer when Exam Starts
         examInterval;
         console.log("Timer Start");
@@ -69,6 +71,7 @@ function examStart() {
     submitExam();
   }
 
+  //TODO Set up Automatic Validation for Preliminary Grade
   function submitExam(){
     console.log("Submission in Progress")
     // End Exam Timer Early
