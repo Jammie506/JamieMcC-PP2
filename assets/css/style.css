@@ -105,3 +105,24 @@ main{
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
+
+/* Footer */
+
+footer{
+    background-color: #f1e9d2;
+    margin-top: auto;
+}
+
+#contact-info{
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#contact-info > i{
+    font-size: 60%;
+    padding: 5%;
+    color: #3a3a3a;
+}
