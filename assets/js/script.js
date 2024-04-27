@@ -5,12 +5,22 @@ var secondsBetweenActions = 5;
 var secondsRemaining = secondsBetweenActions;
 var examInterval;
 
+//Checking Number of Available Questions
+let allQuestions = document.getElementsByClassName("exam-questions");
+let shortQuestions = document.getElementsByClassName("short-question");
+let longQuestions = document.getElementsByClassName("long-question");
+
+console.log(allQuestions.length);
+console.log(shortQuestions.length);
+console.log(longQuestions.length);
+
 function examStart() {
     // Get Checkbox
     var checkBox = document.getElementById("exam-start");
     // Get Exam Content
     var text = document.getElementById("exam-content");
 
+    //Establishing Timer
     examInterval = setInterval(myTimer, 1000);
 
     // Hide Exam Content Until Exam Starts
