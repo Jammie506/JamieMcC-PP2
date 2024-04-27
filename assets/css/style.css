@@ -140,6 +140,12 @@ main{
     display: none;
 }
 
+/* Hiding Submission Page*/
+
+#exam-submitted{
+    display: none;
+}
+
 /* Footer */
 
 footer{
