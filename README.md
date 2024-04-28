@@ -1,19 +1,17 @@
 ## Word Processing Online Exam - Proof of Concept
 
-Love Swimming is a website that aims to provide a smooth and friendly way for people to start swimming, improve their skills or just make new friends. The site will be primarily targeted towards adults living and working in and around Dublin City Centre. The site will allow users to join tailor-made classes to begin lessons or to improve their fitness and swimming abilities.
+This Project is a Proof of Concept for a Mock Test generator for the QQI Level 4 Course - Word Processing 4N1123. The aim of the site is to provide Students with a way to test their knowledge of some of the base concepts of the course without waiting for set time to do so in class. 
 
-The site will also allow users to set up their own “Community Meets”, allowing for the growth of the community into more specialized training sections for all abilities and styles. Love Swimming will also be useful for swimmers to progress their skills in the water to their desired level, whether this would be to join a more competitive team to compete in races or simply to feel more confident in the water on holidays.
+The site as it is published now serves as an easy way for students to generate a short Mock Exam based on past exam questions and time themselves to see how their knowledge is improving over time. It is planned that future iterations of the page will allow users to ask for specific feedback on their exams and eventually allow for the upload of files in relation to the practical portion of the exam.
 
-![mock up of the love swimming home page accross a variety of devices](assets/images/loveswimming-mockup.png)
+![mock up of the Word Processing Exam home page across a variety of devices](assets/images/homepagemockup.png)
 
 ## Features
 
 * Navigation Bar
-    * In place at the top of all pages, this allows users to easily navigate the entire site without the need to use external controls, such as the browser “Previous Page” or “Back” button.
-    * The simplistic design of the Navigation Bar clearly outlines all that is available for visitors to the site, both on Mobile and Desktop.
-    * The Navigation Bar has been designed to automatically hide using CSS on smaller screens, to be replaced with a menu icon, in order to prevent visual overcrowding.
+    * The Nav Bar provides a clear and striking heading to the page. It also allows for fast navigation between pages.
 
-![image of the love swimming nav bar](assets/images/navbar.png)
+![image of the Word Processing nav bar](assets/images/navbar.png)
 
 * Home Page
     * The home page includes a large “Hero Image” that draws the user’s attention, encouraging them to remain on the site.
@@ -66,6 +64,6 @@ The live link can be found here - https://jammie506.github.io/JamieMcC-PP1/
 * Some additional information on HTML, CSS and JavaScript syntax was found using Web3 School website (https://www.w3schools.com/)
 * Some additional information on HTML, CSS and JavaScript syntax was found using MDN Web Docs website (https://developer.mozilla.org/en-US/)
 
-## Media
+## Media
 
 * No additional media has been added to the page at this time

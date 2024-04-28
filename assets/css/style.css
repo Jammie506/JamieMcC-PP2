@@ -185,6 +185,10 @@ main{
     text-align: justify;
 }
 
+#exam-content > div{
+    padding-top: 20px;
+}
+
 /*Submit Button*/
 #submit-exam{
     display: none;
