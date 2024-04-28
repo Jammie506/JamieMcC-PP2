@@ -177,6 +177,16 @@ main{
     display: none;
 }
 
+/*Exam Content*/
+#exam-content{
+    margin: auto;
+    margin-bottom: 25px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 10px;
+    text-align: justify;
+}
+
 /*Submit Button*/
 #submit-exam{
     display: none;
