@@ -81,10 +81,9 @@ function endAlert(){
   submitExam();
 }
 
-//Setting up Event Listener
+//Setting up Event Listener for Submission
 exam.addEventListener('submit', submitExam);
 
-//TODO Set up Automatic Validation for Preliminary Grade
 function submitExam(event){
   event.preventDefault();
   console.log("Submission in Progress")
@@ -206,6 +205,117 @@ function examValidation(){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[9]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Long Question 1
+  if(window.getComputedStyle(longQuestions[0]).display === "block"){
+    console.log("Works, Visible");
+    //Adding a point for each correct selection
+    if(document.getElementById("q-eleven-a-one").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-eleven-a-two").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-eleven-a-three").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-eleven-a-five").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-eleven-a-six").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(longQuestions[0]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Long Question 2
+  if(window.getComputedStyle(longQuestions[1]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-twelve-a-one").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-twelve-a-two").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-twelve-a-four").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-twelve-a-five").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-twelve-a-six").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(longQuestions[1]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Long Question 3
+  if(window.getComputedStyle(longQuestions[2]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-thirteen-a-one").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-thirteen-a-two").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-thirteen-a-three").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-thirteen-a-five").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-thirteen-a-six").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(longQuestions[2]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Long Question 4
+  if(window.getComputedStyle(longQuestions[3]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-fourteen-a-two").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-fourteen-a-three").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-fourteen-a-four").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-fourteen-a-five").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-fourteen-a-six").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(longQuestions[3]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Long Question 5
+  if(window.getComputedStyle(longQuestions[4]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-fifteen-a-one").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-fifteen-a-three").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-fifteen-a-four").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-fifteen-a-five").checked){
+      prelimGrade++
+    }
+    if(document.getElementById("q-fifteen-a-six").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(longQuestions[4]).display === "none"){
     console.log("Works, Hidden");
   }
 }
