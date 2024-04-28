@@ -14,17 +14,15 @@ The site as it is published now serves as an easy way for students to generate a
 ![image of the Word Processing nav bar](assets/images/navbar.png)
 
 * Home Page
-    * The home page includes a large “Hero Image” that draws the user’s attention, encouraging them to remain on the site.
-    * The use of bright colours also served to catch the user’s attention by creating a visually appealing page.
-    * On large screens the page is laid out in such a way that users can see some of the content below the hero image, encouraging them to scroll to read it. This can increase the amount of time that the user remains on the site.
+    * The Home Page provides simple instructions on how to take the mock exam. The aim of this page is to keep it clear and concise while also providing all necessary information for users.
 
-![image of the love swimming home page](assets/images/homepage.png)
+![image of the Word Processing home page](assets/images/hompage.png)
 
-* Benefits of Swimming
-    * This section outlines some of the reasons that users may be interested in joining the club.
-    * The various and wide-ranging information should help to encourage a wider audience of people to become interested in the club.
+* Exam Page
+    * This is the primary page of the site. It consists of 10 questions chosen from a pool of 15 total MCQs.
+    * There is a timer at the top of the page to ensure that Students are practicing in a more realistic time frame
 
-![image of the love swimming home page](assets/images/homepage.png)
+![image of the Word Processing exam page](assets/images/exampage.png)
 
 ## Features to be Implemented
 
