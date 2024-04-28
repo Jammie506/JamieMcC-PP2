@@ -1,8 +1,6 @@
 /*Import Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');;
 
-/*TODO Overhaul Site Styling*/
-
 /*Wildcard Selector to Override Default Styling*/
 *{
     padding: 0;
@@ -13,7 +11,7 @@
 /*Default Link Styling*/
 a{
     text-decoration: none;
-    color: #253f4b;
+    color: #ffffff;
 }
 
 /*General Styles*/
@@ -42,7 +40,7 @@ h1, h2, h3{
 
 /*Header*/
 header{
-    background-color: #f1e9d2;
+    background-color: #0078d4;
     padding: 1rem;
     position: fixed;
     z-index: 99;
@@ -83,10 +81,6 @@ main{
     margin-top: 108px;
 }
 
-#hero{
-    
-}
-
 #cover-text{
     font-size: 130%;
     margin-bottom: 50px;
@@ -110,7 +104,7 @@ main{
 }
 
 #explaination hr{
-    border-top: 1px solid #3a3a3a;
+    border-top: 1px solid #004578;
     margin: 5px 0;
 }
 
@@ -147,7 +141,7 @@ main{
     font-family: 'Jersey 25', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #253f4b;
+    color: #005a9e;
     font-size: 125%;
 }
 
@@ -159,11 +153,10 @@ main{
 
 .exam-start-label{
     font-size: 5rem;
-    background-color: orange;
 }
 
 .exam-start-trigger:hover{
-    color: green;
+    color: rgb(38, 177, 38);
 }
 
 /*Hiding Exam Content*/
@@ -201,12 +194,12 @@ main{
 }
 
 .submit-exam-trigger .submit-exam-trigger-content{
-    border: 2px solid grey;
+    border: 3px solid rgb(106, 87, 87);
     border-radius: 10px;
 }
 
 .submit-exam-trigger:hover .submit-exam-trigger-content{
-    border: 2px solid green;
+    border: 3px solid rgb(38, 177, 38);
     border-radius: 10px;
 }
 
@@ -223,7 +216,7 @@ main{
 /* Footer */
 
 footer{
-    background-color: #f1e9d2;
+    background-color: #0078d4;
     margin-top: auto;
 }
 
