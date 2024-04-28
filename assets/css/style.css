@@ -142,6 +142,7 @@ main{
 
 #timer{
     /*Style the Contents of the Timer*/
+    display: none;
     text-align: center;
     font-family: 'Jersey 25', sans-serif;
     text-transform: uppercase;
@@ -195,8 +196,8 @@ main{
 .submit-exam-trigger{
     display: flex;
     justify-content: center;
+    padding-top: 25px;
     margin: auto;
-    padding-bottom: 25px;
 }
 
 .submit-exam-trigger .submit-exam-trigger-content{
@@ -207,6 +208,16 @@ main{
 .submit-exam-trigger:hover .submit-exam-trigger-content{
     border: 2px solid green;
     border-radius: 10px;
+}
+
+/* Exam Submitted Blurb*/
+#exam-submitted{
+    margin: auto;
+    margin-bottom: 25px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 10px;
+    text-align: center;
 }
 
 /* Footer */

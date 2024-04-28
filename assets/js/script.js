@@ -11,10 +11,6 @@ let allQuestions = document.getElementsByClassName("exam-questions");
 let shortQuestions = document.getElementsByClassName("short-question");
 let longQuestions = document.getElementsByClassName("long-question");
 
-console.log(allQuestions.length);
-console.log(shortQuestions.length);
-console.log(longQuestions.length);
-
 // Get Checkbox
 let checkBox = document.getElementById("exam-start");
 // Get Exam Content
@@ -41,7 +37,6 @@ function examStart() {
     let j = Math.floor(Math.random()*shortQuestions.length);
     shortQuestions[j].style.display = "none";
   }
-
   for(let l = 0; l < 3; l++){
     let k = Math.floor(Math.random()*longQuestions.length);
     longQuestions[k].style.display = "none";
@@ -49,7 +44,8 @@ function examStart() {
 
   //Start Timer when Exam Starts
   examInterval;
-  console.log("Timer Start");
+  timer.style.display = "block";
+
   } else {
       exam.style.display = "none";
   }
@@ -90,15 +86,19 @@ function submitExam(event){
 
   // End Exam Timer Early
   clearInterval(examInterval);
-  console.log("Timer Cleared")
+  timer.style.display = "none";
 
   exam.style.display = "none";
 
+  //Check User Inputted Answers
   examValidation();
+
+  //Print the calculated grade to the Submission Page the Show Submitted Screen
+  let test = "Your preliminary score is : " + prelimGrade + "/18";
+  document.getElementById("preliminary-score").innerHTML = test;
   console.log(prelimGrade);
   submitted.style.display = "block";
 
-  console.log("Submitting Exam")
   exam.requestSubmit();
   console.log("Exam Submitted");
 }
@@ -108,109 +108,88 @@ function examValidation(){
   //Short Question 1
   if(window.getComputedStyle(shortQuestions[0]).display === "block"){
     //Checks that the question was visible to the user, moves on if not visible
-    console.log("Works, Visible");
     if(document.getElementById("q-one-a-four").checked){
       //Adds points if correct answer submitted
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[0]).display === "none"){
     //Carries on if the Question was Hidden
-    console.log("Works, Hidden");
   }
 
   //Short Question 2
   if(window.getComputedStyle(shortQuestions[1]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-two-a-one").checked){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[1]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Short Question 3
   if(window.getComputedStyle(shortQuestions[2]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-three-a-two").checked){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[2]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Short Question 4
   if(window.getComputedStyle(shortQuestions[3]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-four-a-four").checked){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[3]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Short Question 5
   if(window.getComputedStyle(shortQuestions[4]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-five-a-three").checked){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[4]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Short Question 6
   if(window.getComputedStyle(shortQuestions[5]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-six-a-one").checked){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[5]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Short Question 7
   if(window.getComputedStyle(shortQuestions[6]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-seven-a-two").checked){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[6]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Short Question 8
   if(window.getComputedStyle(shortQuestions[7]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-eight-a-one").checked){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[7]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Short Question 9
   if(window.getComputedStyle(shortQuestions[8]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-nine-a-four").checked){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[8]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Short Question 10
   if(window.getComputedStyle(shortQuestions[9]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-ten-a-one").checked){
       prelimGrade++
     }
   }else if (window.getComputedStyle(shortQuestions[9]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Long Question 1
   if(window.getComputedStyle(longQuestions[0]).display === "block"){
-    console.log("Works, Visible");
     //Adding a point for each correct selection
     if(document.getElementById("q-eleven-a-one").checked){
       prelimGrade++
@@ -228,12 +207,10 @@ function examValidation(){
       prelimGrade++
     }
   }else if (window.getComputedStyle(longQuestions[0]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Long Question 2
   if(window.getComputedStyle(longQuestions[1]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-twelve-a-one").checked){
       prelimGrade++
     }
@@ -250,12 +227,10 @@ function examValidation(){
       prelimGrade++
     }
   }else if (window.getComputedStyle(longQuestions[1]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Long Question 3
   if(window.getComputedStyle(longQuestions[2]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-thirteen-a-one").checked){
       prelimGrade++
     }
@@ -272,12 +247,10 @@ function examValidation(){
       prelimGrade++
     }
   }else if (window.getComputedStyle(longQuestions[2]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Long Question 4
   if(window.getComputedStyle(longQuestions[3]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-fourteen-a-two").checked){
       prelimGrade++
     }
@@ -294,12 +267,10 @@ function examValidation(){
       prelimGrade++
     }
   }else if (window.getComputedStyle(longQuestions[3]).display === "none"){
-    console.log("Works, Hidden");
   }
 
   //Long Question 5
   if(window.getComputedStyle(longQuestions[4]).display === "block"){
-    console.log("Works, Visible");
     if(document.getElementById("q-fifteen-a-one").checked){
       prelimGrade++
     }
@@ -316,6 +287,5 @@ function examValidation(){
       prelimGrade++
     }
   }else if (window.getComputedStyle(longQuestions[4]).display === "none"){
-    console.log("Works, Hidden");
   }
 }
