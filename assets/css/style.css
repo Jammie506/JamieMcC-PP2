@@ -55,6 +55,10 @@ header{
     padding-left: 25px;
 }
 
+#logo > h1{
+    color: #ffffff;
+}
+
 nav{
     display: block;
     position: relative;
