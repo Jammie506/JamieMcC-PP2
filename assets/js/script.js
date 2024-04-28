@@ -4,6 +4,7 @@
 let secondsBetweenActions = 1200;
 let secondsRemaining = secondsBetweenActions;
 let examInterval;
+let prelimGrade = 0;
 
 //Checking Number of Available Questions
 let allQuestions = document.getElementsByClassName("exam-questions");
@@ -93,9 +94,118 @@ function submitExam(event){
   console.log("Timer Cleared")
 
   exam.style.display = "none";
+
+  examValidation();
+  console.log(prelimGrade);
   submitted.style.display = "block";
 
   console.log("Submitting Exam")
   exam.requestSubmit();
   console.log("Exam Submitted");
+}
+
+//Exam Validation for a Preliminary Grade
+function examValidation(){
+  //Short Question 1
+  if(window.getComputedStyle(shortQuestions[0]).display === "block"){
+    //Checks that the question was visible to the user, moves on if not visible
+    console.log("Works, Visible");
+    if(document.getElementById("q-one-a-four").checked){
+      //Adds points if correct answer submitted
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[0]).display === "none"){
+    //Carries on if the Question was Hidden
+    console.log("Works, Hidden");
+  }
+
+  //Short Question 2
+  if(window.getComputedStyle(shortQuestions[1]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-two-a-one").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[1]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Short Question 3
+  if(window.getComputedStyle(shortQuestions[2]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-three-a-two").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[2]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Short Question 4
+  if(window.getComputedStyle(shortQuestions[3]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-four-a-four").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[3]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Short Question 5
+  if(window.getComputedStyle(shortQuestions[4]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-five-a-three").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[4]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Short Question 6
+  if(window.getComputedStyle(shortQuestions[5]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-six-a-one").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[5]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Short Question 7
+  if(window.getComputedStyle(shortQuestions[6]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-seven-a-two").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[6]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Short Question 8
+  if(window.getComputedStyle(shortQuestions[7]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-eight-a-one").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[7]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Short Question 9
+  if(window.getComputedStyle(shortQuestions[8]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-nine-a-four").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[8]).display === "none"){
+    console.log("Works, Hidden");
+  }
+
+  //Short Question 10
+  if(window.getComputedStyle(shortQuestions[9]).display === "block"){
+    console.log("Works, Visible");
+    if(document.getElementById("q-ten-a-one").checked){
+      prelimGrade++
+    }
+  }else if (window.getComputedStyle(shortQuestions[9]).display === "none"){
+    console.log("Works, Hidden");
+  }
 }
