@@ -32,11 +32,10 @@ function examStart() {
   // Hide Exam Content Until Exam Starts
   if (checkBox.checked == true){
     //Hide Exam Intro and Show Exam
-    //TODO Set up Question Randomization 
-
     exam.style.display = "block";
     intro.style.display = "none";
 
+    //Pseudo-Randomize which Questions are Shown on the Exam
   for(let i = 0; i < 2; i++){
     let j = Math.floor(Math.random()*shortQuestions.length);
     shortQuestions[j].style.display = "none";
@@ -50,10 +49,9 @@ function examStart() {
   //Start Timer when Exam Starts
   examInterval;
   console.log("Timer Start");
-} else {
-    exam.style.display = "none";
-}
-
+  } else {
+      exam.style.display = "none";
+  }
 }
 
 function myTimer(){
@@ -82,9 +80,14 @@ function endAlert(){
   submitExam();
 }
 
+//Setting up Event Listener
+exam.addEventListener('submit', submitExam);
+
 //TODO Set up Automatic Validation for Preliminary Grade
-function submitExam(){
+function submitExam(event){
+  event.preventDefault();
   console.log("Submission in Progress")
+
   // End Exam Timer Early
   clearInterval(examInterval);
   console.log("Timer Cleared")
@@ -92,5 +95,7 @@ function submitExam(){
   exam.style.display = "none";
   submitted.style.display = "block";
 
+  console.log("Submitting Exam")
+  exam.requestSubmit();
   console.log("Exam Submitted");
 }

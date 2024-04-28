@@ -49,11 +49,28 @@
                 </div>
             </div>
             
-            <form id="exam-content" method="POST" action="https://formdump.codeinstitute.net">
+            <form id="exam-content" method="POST" onsubmit="return false">
                 
                 <!--TODO Add in MCQ Answers (radial/ checkbox buttons?)-->
+                <!--TODO Only one Answer per Question-->
                 <div class="exam-questions short-question">
                     <h4>What is the correct way to create a New Document?</h4>
+                    <fieldset class="question-one">
+                        <legend>Please Choose One Answer Below</legend>
+
+                        <input type="radio" class="answer-one" name="question-one-answer">
+                        <label for="answer-one">Open Word > Blank Document</label>
+
+                        <input type="radio" class="answer-two" name="question-one-answer">
+                        <label for="answer-two"> File > New Document</label>
+
+                        <input type="radio" class="answer-three" name="question-one-answer">
+                        <label for="answer-three"> Right Click > New > New Word Document</label>
+
+                        <input type="radio" class="answer-four" name="question-one-answer">
+                        <label for="answer-four"> All of the Above</label>
+                    </fieldset>
+                    
                 </div>
                 <div class="exam-questions short-question">
                     <h4>Which of these is a Word Processing Package?</h4>
@@ -99,7 +116,7 @@
                     <h4>Which group are objects you can add to your Document?</h4>
                 </div>
     
-                <input id="submit-exam" type="button" value="Submit Exam" onclick="submitExam()">
+                <input id="submit-exam" type="submit" value="Submit Exam" >
                 <div>
                     <label for="submit-exam" class="submit-exam-trigger">
                         <div class="submit-exam-trigger-content">
