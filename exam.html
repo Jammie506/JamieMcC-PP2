@@ -34,7 +34,9 @@
                 <h2>Ready to go? Click the button below to load the questions and start your timer!</h2>
                 <h3>Let's a go!</h3>
                 <input type="checkbox" name="exam-start" id="exam-start" onclick="examStart()">
-                <label for="exam-start" class="exam-start-trigger"><i class="fa-solid fa-play"></i></i></label>
+                <label for="exam-start" class="exam-start-trigger">
+                    <i class="fa-solid fa-play"></i>
+                </label>
             </div>
         </section>
 
@@ -97,7 +99,16 @@
                     <h4>Which group are objects you can add to your Document?</h4>
                 </div>
     
-                <input type="button" value="Submit Exam" onclick="submitExam()">
+                <input id="submit-exam" type="button" value="Submit Exam" onclick="submitExam()">
+                <div>
+                    <label for="submit-exam" class="submit-exam-trigger">
+                        <div class="submit-exam-trigger-content">
+                            <h1>Submit Exam </h1>
+                            <h1 class="centre"><i class="fa-solid fa-upload"></i></h1>
+                        </div>
+                    </label>
+                </div>
+                
             </form>
         </section>
 

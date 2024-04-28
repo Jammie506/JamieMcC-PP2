@@ -34,6 +34,12 @@ h1, h2, h3{
     color: #253f4b;
 }
 
+.centre{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
 /*Header*/
 header{
     background-color: #f1e9d2;
@@ -126,18 +132,16 @@ main{
     padding-top: 50px;
 }
 
-/* TODO Style Exam Contents & Timer*/
-
-/*Align the Whole Timer to Centre*/
 #timer-holder{
+    /*Align the Whole Timer to Centre*/
     display: flex;
     justify-content: center;
     margin: auto;
     padding-top: 25px;
 }
 
-/*Style the Contents of the Timer*/
 #timer{
+    /*Style the Contents of the Timer*/
     text-align: center;
     font-family: 'Jersey 25', sans-serif;
     text-transform: uppercase;
@@ -154,6 +158,11 @@ main{
 
 .exam-start-label{
     font-size: 5rem;
+    background-color: orange;
+}
+
+.exam-start-trigger:hover{
+    color: green;
 }
 
 /*Hiding Exam Content*/
@@ -166,6 +175,28 @@ main{
 
 #exam-submitted{
     display: none;
+}
+
+/*Submit Button*/
+#submit-exam{
+    display: none;
+}
+
+.submit-exam-trigger{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+.submit-exam-trigger .submit-exam-trigger-content{
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.submit-exam-trigger:hover .submit-exam-trigger-content{
+    border: 2px solid green;
+    border-radius: 10px;
 }
 
 /* Footer */
