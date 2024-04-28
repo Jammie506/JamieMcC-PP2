@@ -112,11 +112,11 @@ main{
 
 #exam-intro{
     font-size: 130%;
+    margin: auto;
     margin-bottom: 50px;
     width: 80%;
     min-height: 200px;
     padding-top: 10px;
-    padding-left: 25px;
 }
 
 .exam-start-trigger{
@@ -127,6 +127,24 @@ main{
 }
 
 /* TODO Style Exam Contents & Timer*/
+
+/*Align the Whole Timer to Centre*/
+#timer-holder{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 25px;
+}
+
+/*Style the Contents of the Timer*/
+#timer{
+    text-align: center;
+    font-family: 'Jersey 25', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #253f4b;
+    font-size: 125%;
+}
 
 /* Hiding Checkbox */
 
